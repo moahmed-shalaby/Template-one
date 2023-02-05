@@ -1,0 +1,346 @@
+/* global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+i {
+  opacity: 0.5;
+  color: cadetblue;
+  transition: 0.9s;
+}
+i:hover {
+  opacity: 1;
+  color: rgb(66, 66, 201);
+}
+.h-text {
+  text-transform: capitalize;
+  font-size: 15px;
+  height: 50px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h-text:hover {
+  font-weight: bold;
+  font-size: 20px;
+  color: coral;
+}
+.container-add {
+  font-weight: bold;
+  font-size: 100px;
+  color: rgb(187, 182, 182);
+  line-height: 1px;
+  transition: 0.9s;
+}
+.container-add:hover {
+  text-shadow: 2px 2px 2px black;
+}
+.container-move {
+  position: relative;
+}
+.container-move-p {
+  position: absolute;
+  top: 80px;
+  left: 25%;
+  text-transform: capitalize;
+}
+.font-p {
+  font-size: 16px;
+  transition: 0.9s;
+}
+.font-p:hover {
+  font-weight: bold;
+}
+
+/* End global rules */
+
+/* Small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start header */
+
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+
+.header .links {
+  position: relative;
+}
+.header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+.header .links .icon span {
+  background-color: #222;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+
+.header .links ul {
+  list-style: none;
+  margin: 0px;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0px;
+  padding: 0px;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #1f1c1c transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+  font-weight: bold;
+  color: coral;
+  border-bottom: 1px solid #333;
+}
+.header .links ul li:not(last-child) {
+  border: 1px solid rgb(231, 228, 228);
+}
+
+/* End header */
+
+/* ******************************************************************************************************************************* */
+
+/* start content */
+.pic {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.image img {
+  width: 90%;
+  height: 480px;
+  opacity: 0.5;
+  transition: 0.9s;
+}
+.image img:hover {
+  opacity: 1;
+}
+.pic .text {
+  position: absolute;
+  top: 90px;
+  left: 40%;
+  text-align: center;
+}
+h2 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(35, 133, 136);
+}
+pre {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* End contect pic */
+
+/* ***************************************************************************************************************************************** */
+
+/* Start Feature */
+.first-data {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.first-data div {
+  width: 29%;
+  text-align: center;
+}
+.first-data div:nth-child(2) {
+  border-bottom: 2px solid rgb(121, 118, 118);
+}
+
+/* End Feature */
+
+/* ***************************************************************************************************************************************** */
+
+/* start links */
+
+/* start first link services */
+
+.srvs {
+  height: 430px;
+  text-align: center;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(2, 550px);
+  grid-template-areas:
+    "srv1 srv2 "
+    "srv3 srv4 ";
+}
+.srvs .srv:first-child {
+  grid-area: srv1;
+}
+.srvs .srv:nth-child(2) {
+  grid-area: srv2;
+}
+
+.srvs .srv:nth-child(3) {
+  grid-area: srv3;
+}
+.srvs .srv:last-child {
+  grid-area: srv4;
+}
+/* end first link services */
+
+/* ***************************************************************************************************************************************** */
+
+/* start second link portfolio */
+
+.port-cont {
+  background-color: #eee;
+  width: 100%;
+  height: 550px;
+}
+.port-cont-data {
+  margin-top: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.port-cont-data div {
+  width: 29%;
+}
+.port-cont img {
+  width: 400px;
+  height: 250px;
+  opacity: 0.5;
+  transition: 0.9s;
+}
+.port-cont img:hover {
+  opacity: 1;
+}
+/* End second link portfolio*/
+
+/* ***************************************************************************************************************************************** */
+
+/* Start third link About */
+.about-cont {
+  width: 100%;
+  height: 400px;
+  margin-top: 10px;
+}
+.about {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+  align-content: center;
+  margin-top: 70px;
+}
+.about .image {
+  width: 40%;
+}
+.about .image img {
+  width: 400px;
+  height: 300px;
+}
+.about .TXT {
+  width: 30%;
+  align-items: flex-end;
+}
+/* End third link About */
+
+/* ***************************************************************************************************************************************** */
+
+/* Start four link contact */
+.contact-cont {
+  background-color: #333;
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+.contact-cont .contact {
+  justify-content: center;
+  align-content: center;
+  margin: 20px auto;
+}
+.contact h6 {
+  font-weight: bold;
+  font-size: 30px;
+}
